@@ -10,7 +10,7 @@ setup(
     author_email="rasmus@callofthevoid.dk",
     description="An example of how to create and publish a Python package",
     packages=['test_package'],
-    install_requires=['configparser', 'pyodbc'],
+    install_requires=[],
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[
