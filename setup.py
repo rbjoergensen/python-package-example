@@ -4,7 +4,6 @@ import os
 with open("Readme.md", "r") as fh:
     long_description = fh.read()
 
-print(os.environ["Build.BuildNumber"])
 print(os.environ["Build_BuildNumber"])
 print(os.environ["Build__BuildNumber"])
 
