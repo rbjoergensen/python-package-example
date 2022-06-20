@@ -5,7 +5,7 @@ with open("Readme.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="python-package-example",
+    name="callofthevoid_example",
     version=os.environ["BUILD_BUILDNUMBER"],
     author="Rasmus Jørgensen",
     author_email="rasmus@callofthevoid.dk",
