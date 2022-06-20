@@ -9,7 +9,7 @@ for name, value in os.environ.items():
 
 setup(
     name="python-package-example",
-    version=os.environ["Build_BuildNumber"],
+    version=os.environ["BUILD_BUILDNUMBER"],
     author="Rasmus Jørgensen",
     author_email="rasmus@callofthevoid.dk",
     description="An example of how to create and publish a Python package",
