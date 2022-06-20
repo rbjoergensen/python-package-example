@@ -1,9 +1,9 @@
 # Python package example
-# Todo
+## Todo
 - Add functioning GitHub workflow for publishing to pypi
 - Write documentation for how to use a package from a private Azure DevOps feed
-# Build
-When building a package in the commandline I can use this command to generate the .whl file we need.
+## Build
+When building a package in the commandline I can use this command to generate the .whl file I need.
 ``` shell
 python setup.py clean --all sdist bdist_wheel
 ```
