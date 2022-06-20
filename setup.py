@@ -4,9 +4,6 @@ import os
 with open("Readme.md", "r") as fh:
     long_description = fh.read()
 
-for name, value in os.environ.items():
-    print("{0}: {1}".format(name, value))
-
 setup(
     name="python-package-example",
     version=os.environ["BUILD_BUILDNUMBER"],
