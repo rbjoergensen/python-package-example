@@ -1,11 +1,12 @@
 from setuptools import setup
+import os
 
 with open("Readme.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name="python-package-example",
-    version="0.0.0",
+    version=os.environ.get('Build_BuildNumber'),
     author="Rasmus Jørgensen",
     author_email="rasmus@callofthevoid.dk",
     description="An example of how to create and publish a Python package",
