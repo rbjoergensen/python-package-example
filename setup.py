@@ -4,9 +4,13 @@ import os
 with open("Readme.md", "r") as fh:
     long_description = fh.read()
 
+print(os.environ["Build.BuildNumber"])
+print(os.environ["Build_BuildNumber"])
+print(os.environ["Build__BuildNumber"])
+
 setup(
     name="python-package-example",
-    version=os.environ.get('Build.BuildNumber'),
+    version=os.environ["Build_BuildNumber"],
     author="Rasmus Jørgensen",
     author_email="rasmus@callofthevoid.dk",
     description="An example of how to create and publish a Python package",
