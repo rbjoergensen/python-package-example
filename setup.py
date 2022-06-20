@@ -6,7 +6,7 @@ with open("Readme.md", "r") as fh:
 
 setup(
     name="python-package-example",
-    version=os.environ.get('Build_BuildNumber'),
+    version=os.environ.get('Build.BuildNumber'),
     author="Rasmus Jørgensen",
     author_email="rasmus@callofthevoid.dk",
     description="An example of how to create and publish a Python package",
