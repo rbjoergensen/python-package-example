@@ -1,0 +1,49 @@
+name: Build and publish
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  calculate-version:
+    name: Calculate Version
+    runs-on: ubuntu-latest
+    outputs:
+      semVer: ${{ steps.gitversion.outputs.fullSemVer }}
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout code
+        with:
+          fetch-depth: 0
+
+      - uses: gittools/actions/gitversion/setup@v0.9.7
+        name: Install GitVersion
+        with:
+          versionSpec: '5.x'
+
+      - uses: gittools/actions/gitversion/execute@v0.9.7
+        name: Determine Version
+        id: gitversion
+        with:
+          useConfigFile: true
+          configFilePath: gitversion.yml
+
+  build:
+    name: Build and publish
+    runs-on: ubuntu-latest
+    needs: calculate-version
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout code
+
+      - name: Build wheel
+        run: python setup.py clean --all sdist bdist_wheel
+
+      - name: List items
+        run: ls -la dist
+
+      #- uses: actions/upload-artifact@v3
+      #  name: Upload artifact
+      #  with:
+      #    name: example-${{ needs.calculate-version.outputs.semVer }}.nupkg
+      #   path: ${{ github.workspace }}/*.nupkg

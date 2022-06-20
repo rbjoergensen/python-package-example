@@ -3,7 +3,7 @@ from setuptools import setup
 with open("Readme.md", "r") as fh:
     long_description = fh.read()
 
-setup (
+setup(
     name="python-package-example",
     version="0.0.0",
     author="Rasmus Jørgensen",

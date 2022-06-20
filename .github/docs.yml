@@ -1,0 +1,6 @@
+navigatorName: Publish Python Package
+category: DevOps
+includeLink: true
+files:
+- file: Readme.md
+  prettyName: Readme
