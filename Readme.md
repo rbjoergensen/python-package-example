@@ -28,7 +28,7 @@ https://dev.azure.com/CallOfTheVoid/CallOfTheVoid/_packaging/cotv-python/setting
 If we want to use this module from the Azure DevOps feed we can install it by specifying the source directly.
 ``` shell
 pip install callofthevoid-example=0.1.30 \
-  --extra-index-url=https://<PersonalAccessToken>@pkgs.dev.azure.com/CallOfTheVoid/CallOfTheVoid/_packaging/cotv-python/pypi/simple/
+  --extra-index-url=https://pkgs.dev.azure.com/CallOfTheVoid/CallOfTheVoid/_packaging/cotv-python/pypi/simple/
 ```
 We can then import the module and use it like this.
 ``` python
@@ -36,3 +36,4 @@ from callofthevoid_example import test
 
 test.hello()
 ```
+If the package feed was in a private organization we would need to add a personal access token after the `https://` to make it `https://<token>@pkgs.dev...`.
