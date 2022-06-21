@@ -19,3 +19,15 @@ This service account will exist per project and be named after the project. So i
 I can add this account as contributor at the following url under my feeds permissions tab.
 <br/>
 https://dev.azure.com/CallOfTheVoid/CallOfTheVoid/_artifacts/feed/Python/settings/permissions
+## Usage
+If we want to use this module from the Azure DevOps feed we can install it by specifying the source directly.
+``` shell
+pip install callofthevoidexample=0.1.30 \
+  --extra-index-url=https://<PersonalAccessToken>@pkgs.dev.azure.com/CallOfTheVoid/_packaging/Python/pypi/simple/
+```
+We can then import the module and use it like this.
+``` python
+from callofthevoidexample import test_package
+
+test_package.hello()
+```
