@@ -10,7 +10,7 @@ export BUILD_BUILDNUMBER="0.0.0"
 # Build the .whl and clean previous artifacts
 python setup.py clean --all sdist bdist_wheel
 # Install the package for local testing
-pip install ./dist/callofthevoidexample-0.0.0-py3-none-any.whl
+pip install ./dist/callofthevoid-example-0.0.0-py3-none-any.whl
 ```
 In this project I want to build and publish my package using both Azure pipelines and GitHub workflows.
 ## Azure pipeline 
@@ -23,12 +23,12 @@ This access token needs contribution access to the feed in order to publish the 
 This service account will exist per project and be named after the project. So if my project is called CallOfTheVoid my service account will be called `CallOfTheVoid Build Service (CallOfTheVoid)`.
 I can add this account as contributor at the following url under my feeds permissions tab.
 <br/>
-https://dev.azure.com/CallOfTheVoid/CallOfTheVoid/_artifacts/feed/Python/settings/permissions
+https://dev.azure.com/CallOfTheVoid/CallOfTheVoid/_packaging/cotv-python/settings/permissions
 ## Usage
 If we want to use this module from the Azure DevOps feed we can install it by specifying the source directly.
 ``` shell
-pip install callofthevoidexample=0.1.30 \
-  --extra-index-url=https://<PersonalAccessToken>@pkgs.dev.azure.com/CallOfTheVoid/_packaging/Python/pypi/simple/
+pip install callofthevoid-example=0.1.30 \
+  --extra-index-url=https://<PersonalAccessToken>@pkgs.dev.azure.com/CallOfTheVoid/CallOfTheVoid/_packaging/cotv-python/pypi/simple/
 ```
 We can then import the module and use it like this.
 ``` python
