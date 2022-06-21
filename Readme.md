@@ -5,7 +5,12 @@ Todo:
 ## Build
 When building a package in the commandline I can use this command to generate the .whl file I need.
 ``` shell
+# Set the version number for setup.py since we're not running in a pipeline
+export BUILD_BUILDNUMBER="0.0.0"
+# Build the .whl and clean previous artifacts
 python setup.py clean --all sdist bdist_wheel
+# Install the package for local testing
+pip install ./dist/callofthevoidexample-0.0.0-py3-none-any.whl
 ```
 In this project I want to build and publish my package using both Azure pipelines and GitHub workflows.
 ## Azure pipeline 
@@ -27,7 +32,7 @@ pip install callofthevoidexample=0.1.30 \
 ```
 We can then import the module and use it like this.
 ``` python
-from callofthevoidexample import test_package
+from callofthevoid_example import test
 
-test_package.hello()
+test.hello()
 ```
