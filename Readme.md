@@ -1,5 +1,5 @@
 # Python package example
-## Todo
+Todo:
 - Add functioning GitHub workflow for publishing to pypi
 - Write documentation for how to use a package from a private Azure DevOps feed
 ## Build
