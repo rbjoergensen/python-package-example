@@ -36,4 +36,4 @@ from callofthevoid_example import test
 
 test.hello()
 ```
-If the package feed was in a private organization we would need to add a personal access token after the `https://` to make it `https://<token>@pkgs.dev...`.
+If the package feed was in a private organization we would need to add a personal access token after the `https://` to make it `https://<token>@pkgs.dev...` which is authenticated.
