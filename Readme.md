@@ -25,7 +25,7 @@ This access token needs contribution access to the feed in order to publish the 
 This service account will exist per project and be named after the project. So if my project is called CallOfTheVoid my service account will be called `CallOfTheVoid Build Service (CallOfTheVoid)`.
 I can add this account as contributor at the following url under my feeds permissions tab.
 <br/>
-[https://dev.azure.com/CallOfTheVoid/CallOfTheVoid/_artifacts/feed/Python/settings/permissions](https://dev.azure.com/CallOfTheVoid/CallOfTheVoid/_artifacts/feed/Python/settings/permissions)
+[https://dev.azure.com/CallOfTheVoid/CallOfTheVoid/_artifacts/feed/cotv-python/settings/permissions](https://dev.azure.com/CallOfTheVoid/CallOfTheVoid/_artifacts/feed/cotv-python/settings/permissions)
 ## Usage
 If we want to use this module from the Azure DevOps feed we can install it by specifying the source directly.
 ``` shell
