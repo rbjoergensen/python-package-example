@@ -1,4 +1,4 @@
-navigatorName: Publish Python Package
+navigatorName: Build and publish Python packages in Azure DevOps
 category: DevOps
 includeLink: true
 files:
